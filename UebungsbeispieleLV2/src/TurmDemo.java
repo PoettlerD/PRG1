@@ -13,7 +13,7 @@ public class TurmDemo {
 			tmpValue = ergebnis;
 			ergebnis = tmpValue * i;
 			System.out.println(tmpValue+" * "+i+" = "+ergebnis);
-			i=i+1;
+			i+=1;
 		}
 	i = 2;
 	while (i <= 9)
@@ -21,7 +21,7 @@ public class TurmDemo {
 		tmpValue = ergebnis;
 		ergebnis = tmpValue / i;
 		System.out.println(tmpValue+" / "+i+" = "+ergebnis);
-		i=i+1;
+		i+=1;
 	}
 			
 	
