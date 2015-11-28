@@ -3,12 +3,26 @@ public class Bruch {
 
 	private int Zaehler;
 	private int Nenner;
+	public static int Counter;
+	
+	private static int MaxCounter = 5;
+	
+	
+	
+	
 	
 	 Bruch (int Zaehler, int Nenner)
 	{
+
+		if (Counter < MaxCounter)
+		{
+		Counter++;
 		this.Zaehler = Zaehler;
 		this.Nenner = Nenner;
-	}
+		}
+		else
+			System.out.println("Nix da!!!");
+		}
 
 	 public int getNenner()
 	 {
@@ -36,16 +50,21 @@ public class Bruch {
 		
 	 }
 
-	 public Bruch multiplicate(int Zaehler1, int Nenner1)
+	 public Bruch multiplicate(Bruch b1)
 	 {
-		 Bruch NewBruch = new Bruch (this.Zaehler*Zaehler1,this.Nenner*Nenner1);
+		 int zaehler = this.Zaehler*b1.Zaehler;
+		 int nenner = this.Nenner*b1.Nenner;
+		 Bruch NewBruch = new Bruch (zaehler,nenner);
 		 return NewBruch;
 		 
 		 
 	 }
-	 public Bruch multiplicate(int Zaehler1, int Nenner1, int Zaehler2, int Nenner2)
+	 public Bruch multiplicate(Bruch b1, Bruch b2)
 	 {
-		 Bruch NewBruch = new Bruch (this.Zaehler*Zaehler1*Zaehler2,this.Nenner*Nenner1*Nenner2);
+		 int zaehler = this.Zaehler*b1.Zaehler*b2.Zaehler;
+		 int nenner = this.Nenner*b1.Nenner*b2.Nenner;
+		 
+		 Bruch NewBruch = new Bruch (zaehler,nenner);
 		 return NewBruch;
 		 
 		 
