@@ -10,7 +10,7 @@ public class Demo {
 		porsche911.Year = 1979;
 		porsche911.SetCurrentGear(7);
 		System.out.println("aktueller Gang Porsche: "+porsche911.CurretGear);
-		porsche911.NextGear();
+	
 		System.out.println("aktueller Gang Porsche: "+porsche911.CurretGear);
 		porsche911.accelerate();
 		System.out.println("Aktuelle Geschwindigkeit Porsche: "+porsche911.CurrentSpeed);
@@ -27,7 +27,7 @@ public class Demo {
 		Golf5.Brand = "VW";
 		Golf5.Colour = "Blue";
 		Golf5.Year = 2004;
-		Golf5.NextGear();
+		
 		Golf5.SetCurrentGear(2);
 		System.out.println("aktueller Gang Gölf: "+Golf5.CurretGear);
 	}

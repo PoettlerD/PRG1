@@ -5,8 +5,8 @@ public class KontoDemo {
 		// TODO Auto-generated method stub
 
 		
-		Konto Meins = new Konto();
-		Meins.setInhaber("David Pöttler");
+		Konto Meins = new Konto("David Pöttler");
+		
 		Meins.aufbauchen(1_000_000.0);
 		Meins.abbuchen(500_000);
 		System.out.println("Kontostand ist:"+Meins.getKontostand());

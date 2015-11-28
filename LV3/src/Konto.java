@@ -5,7 +5,9 @@ public class Konto {
 	private double Kontostand;
 	
 	
-	public void setInhaber(String Inhaber)
+
+
+	public Konto(String Inhaber)
 	{
 		this.Inhaber = Inhaber;
 		this.Kontostand = 0;
