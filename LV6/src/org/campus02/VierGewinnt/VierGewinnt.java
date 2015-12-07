@@ -33,8 +33,8 @@ public class VierGewinnt {
 	{
 		x = x-1;
 		y = y-1;
-		if (charArray[x][y] == ' ')
-		{charArray[x][y] = 'A';
+		if (charArray[y][x] == ' ')
+		{charArray[y][x] = 'A';
 		return true;}
 		else
 		{
@@ -45,8 +45,8 @@ public class VierGewinnt {
 		{
 			x = x-1;
 			y = y-1;
-			if (charArray[x][y] == ' ')
-			{charArray[x][y] = 'B';
+			if (charArray[y][x] == ' ')
+			{charArray[y][x] = 'B';
 			return true;}
 			else
 			{
@@ -57,11 +57,11 @@ public class VierGewinnt {
 		private char fourInRow()
 			{
 				
-				for (int x = 0; x <= sizeX; x++)
+				for (int x = 0; x < sizeX; x++)
 				{
 					int countA = 0;
 					int countB = 0;
-					for (int y = 0; y<= sizeY; y++)
+					for (int y = 0; y< sizeY; y++)
 					{
 						
 						if (charArray[x][y] == 'A')
@@ -86,8 +86,76 @@ public class VierGewinnt {
 				}
 				return '-';
 			}
+		
+		
+		private char fourInColumn()
+		{
 			
+			for (int y = 0; y < sizeX; y++)
+			{
+				int countA = 0;
+				int countB = 0;
+				for (int x = 0; x< sizeY; x++)
+				{
+					
+					if (charArray[x][y] == 'A')
+					{
+						countA++;
+					}
+					else if (charArray[x][y] == 'B')
+					{
+						countB++;
+					}
+				if (countA == 4)
+				{
+					return 'A';
+				}
+				else if (countB == 4)
+				{
+					return 'B';
+				}
+				}
+			
+			
+			}
+			return '-';
+		}
+		
+		
+		public char winner()
+		{
+			char winner = fourInRow();
+			if (winner != ' ')
+			{
+				return winner;
+			}
+		winner = fourInColumn();
+		{
+			if (winner != ' ')
+					{
+							return winner;
+					}
+		}
+		return '-';
+		}
+
+
+
+public void print()
+{
+	for (int x = 0; x < sizeX; x++)
+	{
+		for (int y = 0; y < sizeY; y++)
+		{
+			System.out.print(charArray[x][y]);
+		}
+	System.out.println();
 	}
+}
+
+}
+		
+	
 	
 
 	
