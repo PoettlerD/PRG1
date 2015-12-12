@@ -31,8 +31,7 @@ public class VierGewinnt {
 
 	public boolean playerA(int x, int y)
 	{
-		x = x-1;
-		y = y-1;
+
 		if (charArray[y][x] == ' ')
 		{charArray[y][x] = 'A';
 		return true;}
@@ -43,8 +42,7 @@ public class VierGewinnt {
 	}
 		public boolean playerB(int x, int y)
 		{
-			x = x-1;
-			y = y-1;
+
 			if (charArray[y][x] == ' ')
 			{charArray[y][x] = 'B';
 			return true;}
@@ -54,7 +52,7 @@ public class VierGewinnt {
 			}
 		}
 			
-		private char fourInRow()
+		private char fourInColumn()
 			{
 				
 				for (int x = 0; x < sizeX; x++)
@@ -67,10 +65,12 @@ public class VierGewinnt {
 						if (charArray[x][y] == 'A')
 						{
 							countA++;
+							countB = 0;
 						}
 						else if (charArray[x][y] == 'B')
 						{
 							countB++;
+							countA = 0;
 						}
 					if (countA == 4)
 					{
@@ -88,7 +88,7 @@ public class VierGewinnt {
 			}
 		
 		
-		private char fourInColumn()
+		private char fourInRow()
 		{
 			
 			for (int y = 0; y < sizeX; y++)
@@ -101,10 +101,12 @@ public class VierGewinnt {
 					if (charArray[x][y] == 'A')
 					{
 						countA++;
+						countB = 0;
 					}
 					else if (charArray[x][y] == 'B')
 					{
 						countB++;
+						countA = 0;
 					}
 				if (countA == 4)
 				{
@@ -121,6 +123,8 @@ public class VierGewinnt {
 			return '-';
 		}
 		
+		
+	
 		
 		public char winner()
 		{
@@ -152,6 +156,61 @@ public void print()
 	System.out.println();
 	}
 }
+
+
+
+
+public boolean playerAecht(int x)
+{
+	Boolean returnvalue = false;
+	
+	for (int i = (this.getSizeY()-1); i >= 0;i--)
+	{
+		
+	
+	
+	if (charArray[i][x] == ' ')
+	{charArray[i][x] = 'A';
+	returnvalue = true;
+	break;
+	}
+	else
+	{
+		returnvalue = false;
+	
+	}
+	}
+return returnvalue;
+
+}
+public boolean playerBecht(int x)
+{
+	Boolean returnvalue = false;
+	
+	for (int i = (this.getSizeY()-1); i >= 0;i--)
+	{
+		
+	
+	
+	if (charArray[i][x] == ' ')
+	{charArray[i][x] = 'B';
+	returnvalue = true;
+	break;
+	}
+	else
+	{
+		returnvalue = false;
+	
+	}
+	}
+return returnvalue;
+
+}
+
+
+
+
+
 
 }
 		
