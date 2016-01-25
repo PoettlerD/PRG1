@@ -76,4 +76,11 @@ public class EmployeeManager {
 	}
 	
 	
+	public ArrayList<Employee> getAllEmployees ()
+	{
+		
+		return employees;
+	}
+
+	
 }
