@@ -1,7 +1,5 @@
 package org.campus02.emp;
 
-import com.sun.jmx.mbeanserver.SunJmxMBeanServer;
-
 public class OrganigramHandler {
 	
 	public static String getChainOfCommand(Employee employee)
