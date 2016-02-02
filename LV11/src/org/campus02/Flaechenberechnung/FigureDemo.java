@@ -27,9 +27,13 @@ public class FigureDemo {
 		figmgr.add(circ3);
 		figmgr.add(circ4);
 		
-		System.out.println(figmgr.getAverageAreaSize());
+		Figure gg = circ1;
+		
+		
+		/*System.out.println(figmgr.getAverageAreaSize());
 		System.out.println(figmgr.getMaxPerimeter());
-		System.out.println(figmgr.getAreaBySizeCategories());
+		System.out.println(figmgr.getAreaBySizeCategories());*/
+		System.out.println(gg.getArea());
 	}
 
 }

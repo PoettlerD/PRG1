@@ -62,9 +62,25 @@ public static String processHierachy (Employee emp)
 		return result;
 		
 	}
+	public static String processHierachy (Employee emp, String indent)
+	{
+	if (emp.getSubordinates().isEmpty())
+	{
+		return indent+" - " + emp.getRole() + " "+emp.getName()+"\n";
+	}
+
+	String result = indent+" + "+emp.getRole() + "("+emp.getName()+") \n";
+	for (Employee e : emp.getSubordinates()) {
+		result += processHierachy(e, indent+indent);
+		
 	}
 	
-
+	
+	
+	return result;
+	}
+	
+}
 	
 
 

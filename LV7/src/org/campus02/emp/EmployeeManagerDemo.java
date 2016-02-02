@@ -26,12 +26,12 @@ public class EmployeeManagerDemo {
 		Employee employee3 = new Employee(3, "Mitarbeiter 3", 100000, "Dev", "Dev", null, new ArrayList<Employee>());
 		Employee employee4 = new Employee(4, "Mitarbeiter 4", 100000, "Dev", "Dev", null, new ArrayList<Employee>());
 		Employee employee5 = new Employee(5, "Mitarbeiter 5", 100000, "Mini Boss", "HR", null, new ArrayList<Employee>());
-		
+		//Employee employee6 = new Employee(5, "Mitarbeiter 6", 100000, "Lehrbua", "Dev", null, new ArrayList<Employee>());
 		
 		
 		employee1.addSubordinates(employee2); 
 		employee1.addSubordinates(employee5);
-		
+		//employee3.addSubordinates(employee6);
 		employee2.addSubordinates(employee3);
 		employee2.addSubordinates(employee4);
 		
@@ -54,7 +54,7 @@ public class EmployeeManagerDemo {
 			System.out.println(OrganigramHandler.getChainOfCommand(emp));
 		}
 		System.out.println("////////////////////");
-		System.out.println(OrganigramHandler.processHierachy(employee1));
+		System.out.println(OrganigramHandler.processHierachy(employee1," "));
 		
 		
 	//	System.out.println(OrganigramHandler.getChainOfCommand(employee4));
